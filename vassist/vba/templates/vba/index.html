@@ -13,6 +13,10 @@
     <!--    Vue JS-->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
 <body>
@@ -30,28 +34,86 @@
 
     <div class="main">
         <div class="button-container">
-            <a href="" class="main-button1"><i class="fas fa-book-open fa-4x"></i>
+            <a href="" class="main-button1 modal-trigger" data-target="modal1" @click="infomodal"><i class="fas fa-book-open fa-4x"></i>
                 <p>Real Stories</p></a>
-            <a href="" class="main-button2"><i class="fas fa-info-circle fa-4x"></i>
+            <a href="" class="main-button2 modal-trigger" data-target="modal2" @click="infomodal"><i class="fas fa-info-circle fa-4x"></i>
                 <p>Get Info</p></a>
-            <a href="" class="main-button3"><i class="fas fa-user-plus fa-4x"></i>
+            <a href="" class="main-button3 modal-trigger" data-target="modal3" @click="infomodal"><i class="fas fa-user-plus fa-4x"></i>
                 <p>Subscribe</p></a>
-            <a href="" class="main-button1"><i class="fas fa-users fa-4x"></i>
+            <a href="" class="main-button1 modal-trigger" data-target="modal4" @click="infomodal"><i class="fas fa-users fa-4x"></i>
                 <p>Refer a friend</p></a>
-            <a href="" class="main-button2"><i class="fas fa-id-card fa-4x"></i>
+            <a href="" class="main-button2 modal-trigger" data-target="modal5" @click="infomodal"><i class="fas fa-id-card fa-4x"></i>
                 <p>Add to Contacts</p></a>
-            <a href="" class="main-button3"><i class="fas fa-hands-helping fa-4x"></i>
+            <a href="" class="main-button3 modal-trigger" data-target="modal6" @click="infomodal"><i class="fas fa-hands-helping fa-4x"></i>
                 <p>Help Others</p></a>
         </div>
         <div class="social-media">
             <a href="https://www.linkedin.com/in/debbiedunngonzalez/"><i class="fab fa-linkedin fa-4x social"></i></a>
-            <a href="https://www.linkedin.com/in/debbiedunngonzalez/"><i class="fab fa-facebook-square fa-4x social"></i></a>
+            <a href="https://www.linkedin.com/in/debbiedunngonzalez/"><i
+                    class="fab fa-facebook-square fa-4x social"></i></a>
         </div>
     </div>
     <footer><a href="">Piece O'Mind</a> with Thin and Happy for Life</footer>
 
 
 </div>
+
+<!-- Modals -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header 1</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header 2</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header 3</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header 4</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header 5</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header 6</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+
 <script>
     let app = new Vue({
         el: "#app",
@@ -60,11 +122,16 @@
             ']]'
         ],
         data: {},
-        methods: {},
+        methods: {
+            infomodal: function () {
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems);
+
+            },
+        },
 
     })
-// end vue
-
+    // end vue
 
 
 </script>
